@@ -5,7 +5,7 @@ from typing import Dict, List, Any, Optional, Set, Tuple
 from enum import Enum
 from dataclasses import dataclass
 
-from ..data_generation.endpoint_generator import EndpointSpec, HTTPMethod
+from data_generation.endpoint_generator import EndpointSpec, HTTPMethod
 
 
 class DifficultyLevel(Enum):

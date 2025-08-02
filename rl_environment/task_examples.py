@@ -4,7 +4,7 @@ import asyncio
 import json
 from typing import Dict, List, Any
 
-from .task_generator import (
+from rl_environment.task_generator import (
     TaskGeneratorManager, TaskType, TaskDifficulty, LearningTask
 )
 

@@ -1,8 +1,8 @@
 import random
 from typing import Dict, Any, List, Optional, Union
 from datetime import datetime, timedelta
-from ..data_generation.data_generator import RandomDataGenerator
-from ..data_generation.endpoint_generator import EndpointSpec, HTTPMethod
+from data_generation.data_generator import RandomDataGenerator
+from data_generation.endpoint_generator import EndpointSpec, HTTPMethod
 
 
 class MockResponseGenerator:

@@ -6,8 +6,8 @@ from typing import Dict, List, Optional, Any, Callable
 from contextlib import contextmanager
 import logging
 
-from .schema_server import SchemaBasedMockServer
-from ..data_generation.api_schema_generator import APISchemaGenerator
+from mock_servers.schema_server import SchemaBasedMockServer
+from data_generation.api_schema_generator import APISchemaGenerator
 
 
 class ServerManager:

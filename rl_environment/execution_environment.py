@@ -7,13 +7,13 @@ from enum import Enum
 import logging
 from contextlib import asynccontextmanager
 
-from .code_executor import (
+from rl_environment.code_executor import (
     BaseCodeExecutor, SubprocessCodeExecutor, MockServerIntegratedExecutor,
     ExecutionResult, ExecutionStatus, SecurityPolicy, CodeExecutionManager
 )
-from .docker_executor import DockerCodeExecutor, DockerServerIntegratedExecutor
-from ..mock_servers.server_manager import ServerManager
-from ..mock_servers.schema_server import SchemaBasedMockServer
+from rl_environment.docker_executor import DockerCodeExecutor, DockerServerIntegratedExecutor
+from mock_servers.server_manager import ServerManager
+from mock_servers.schema_server import SchemaBasedMockServer
 
 
 class EnvironmentType(Enum):

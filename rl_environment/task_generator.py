@@ -5,8 +5,8 @@ from dataclasses import dataclass, field
 from enum import Enum
 from abc import ABC, abstractmethod
 
-from ..data_generation.endpoint_generator import EndpointSpec, HTTPMethod
-from ..data_generation.api_schema_generator import APISchemaGenerator
+from data_generation.endpoint_generator import EndpointSpec, HTTPMethod
+from data_generation.api_schema_generator import APISchemaGenerator
 # Removed unused imports - MissingComponent, DifficultyLevel, RewardComponent
 
 
@@ -171,7 +171,7 @@ class BasicGetRequestGenerator(BaseTaskGenerator):
     ) -> LearningTask:
         
         # Generate API endpoints
-        from ..data_generation.endpoint_generator import EndpointGenerator
+        from data_generation.endpoint_generator import EndpointGenerator
         endpoint_gen = EndpointGenerator()
         
         if random.choice([True, False]):
@@ -303,7 +303,7 @@ class PostCreateResourceGenerator(BaseTaskGenerator):
     ) -> LearningTask:
         
         # Generate API endpoints
-        from ..data_generation.endpoint_generator import EndpointGenerator
+        from data_generation.endpoint_generator import EndpointGenerator
         endpoint_gen = EndpointGenerator()
         
         resource_choice = random.choice(["user", "product"])
@@ -491,7 +491,7 @@ class AuthenticationSetupGenerator(BaseTaskGenerator):
     ) -> LearningTask:
         
         # Generate endpoints that require auth
-        from ..data_generation.endpoint_generator import EndpointGenerator
+        from data_generation.endpoint_generator import EndpointGenerator
         endpoint_gen = EndpointGenerator()
         endpoints = endpoint_gen.get_user_endpoints()[:2]
         
@@ -740,7 +740,7 @@ class ErrorHandlingGenerator(BaseTaskGenerator):
     ) -> LearningTask:
         
         # Generate endpoints
-        from ..data_generation.endpoint_generator import EndpointGenerator
+        from data_generation.endpoint_generator import EndpointGenerator
         endpoint_gen = EndpointGenerator()
         endpoints = endpoint_gen.get_user_endpoints()[:3]
         
@@ -984,7 +984,7 @@ class PaginationHandlingGenerator(BaseTaskGenerator):
     ) -> LearningTask:
         
         # Generate endpoints with pagination
-        from ..data_generation.endpoint_generator import EndpointGenerator
+        from data_generation.endpoint_generator import EndpointGenerator
         endpoint_gen = EndpointGenerator()
         endpoints = [ep for ep in endpoint_gen.get_user_endpoints() if ep.method == HTTPMethod.GET and "{" not in ep.path]
         
@@ -1251,7 +1251,7 @@ class PutUpdateResourceGenerator(BaseTaskGenerator):
     ) -> LearningTask:
         
         # Generate API endpoints
-        from ..data_generation.endpoint_generator import EndpointGenerator
+        from data_generation.endpoint_generator import EndpointGenerator
         endpoint_gen = EndpointGenerator()
         
         resource_choice = random.choice(["user", "product"])
@@ -1459,7 +1459,7 @@ class DeleteResourceGenerator(BaseTaskGenerator):
     ) -> LearningTask:
         
         # Generate API endpoints
-        from ..data_generation.endpoint_generator import EndpointGenerator
+        from data_generation.endpoint_generator import EndpointGenerator
         endpoint_gen = EndpointGenerator()
         
         resource_choice = random.choice(["user", "product"])
@@ -1698,7 +1698,7 @@ class BulkOperationsGenerator(BaseTaskGenerator):
     ) -> LearningTask:
         
         # Generate API endpoints
-        from ..data_generation.endpoint_generator import EndpointGenerator
+        from data_generation.endpoint_generator import EndpointGenerator
         endpoint_gen = EndpointGenerator()
         
         resource_choice = random.choice(["user", "product"])
@@ -2033,7 +2033,7 @@ class ResponseValidationGenerator(BaseTaskGenerator):
     ) -> LearningTask:
         
         # Generate API endpoints
-        from ..data_generation.endpoint_generator import EndpointGenerator
+        from data_generation.endpoint_generator import EndpointGenerator
         endpoint_gen = EndpointGenerator()
         endpoints = endpoint_gen.get_user_endpoints()[:2]
         
@@ -2415,7 +2415,7 @@ class AsyncApiCallsGenerator(BaseTaskGenerator):
     ) -> LearningTask:
         
         # Generate API endpoints
-        from ..data_generation.endpoint_generator import EndpointGenerator
+        from data_generation.endpoint_generator import EndpointGenerator
         endpoint_gen = EndpointGenerator()
         endpoints = endpoint_gen.get_user_endpoints()[:3]
         

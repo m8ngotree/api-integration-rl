@@ -3,12 +3,12 @@
 import json
 from typing import List
 
-from .code_template_generator import MissingComponent, DifficultyLevel
-from .schema_analyzer import APISchemaAnalyzer, LearningObjective
-from .integration_patterns import PatternBasedTemplateGenerator
-from .template_configurator import TemplateConfigurator, TemplateType
-from ..data_generation.api_schema_generator import APISchemaGenerator
-from ..data_generation.endpoint_generator import EndpointGenerator
+from utilities.code_template_generator import MissingComponent, DifficultyLevel
+from utilities.schema_analyzer import APISchemaAnalyzer, LearningObjective
+from utilities.integration_patterns import PatternBasedTemplateGenerator
+from utilities.template_configurator import TemplateConfigurator, TemplateType
+from data_generation.api_schema_generator import APISchemaGenerator
+from data_generation.endpoint_generator import EndpointGenerator
 
 
 def basic_template_generation_example():

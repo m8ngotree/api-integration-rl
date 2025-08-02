@@ -2,8 +2,8 @@ from typing import Dict, List, Any, Optional, Set, Tuple
 from dataclasses import dataclass
 from enum import Enum
 
-from ..data_generation.endpoint_generator import EndpointSpec, HTTPMethod
-from .code_template_generator import MissingComponent, DifficultyLevel
+from data_generation.endpoint_generator import EndpointSpec, HTTPMethod
+from utilities.code_template_generator import MissingComponent, DifficultyLevel
 
 
 class APIComplexity(Enum):

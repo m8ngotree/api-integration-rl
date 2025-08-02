@@ -1,7 +1,7 @@
 from typing import Dict, List, Any, Optional
 from enum import Enum
 import random
-from .schemas import (
+from data_generation.schemas import (
     User, UserCreate, UserUpdate, UserResponse,
     Product, ProductCreate, ProductUpdate, ProductResponse,
     PaginatedResponse, ErrorResponse

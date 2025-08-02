@@ -5,9 +5,9 @@ import asyncio
 import requests
 from typing import Dict, Any
 
-from .server_manager import ServerManager
-from .schema_server import SchemaBasedMockServer
-from ..data_generation.api_schema_generator import APISchemaGenerator
+from mock_servers.server_manager import ServerManager
+from mock_servers.schema_server import SchemaBasedMockServer
+from data_generation.api_schema_generator import APISchemaGenerator
 
 
 def basic_server_example():

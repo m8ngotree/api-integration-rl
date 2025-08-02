@@ -6,8 +6,8 @@ from dataclasses import dataclass, field
 from enum import Enum
 import logging
 
-from .code_executor import ExecutionResult, ExecutionStatus
-from ..data_generation.endpoint_generator import EndpointSpec, HTTPMethod
+from rl_environment.code_executor import ExecutionResult, ExecutionStatus
+from data_generation.endpoint_generator import EndpointSpec, HTTPMethod
 
 
 class RewardComponent(Enum):

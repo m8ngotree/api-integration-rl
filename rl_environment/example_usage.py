@@ -4,13 +4,13 @@ import asyncio
 import time
 from typing import List, Dict, Any
 
-from .execution_environment import (
+from rl_environment.execution_environment import (
     SafeExecutionEnvironment, ExecutionEnvironmentConfig, ExecutionEnvironmentFactory,
     EnvironmentType, TestCase, TestSuite
 )
-from .code_executor import SecurityPolicy, ExecutionStatus
-from ..data_generation.api_schema_generator import APISchemaGenerator
-from ..data_generation.endpoint_generator import EndpointGenerator
+from rl_environment.code_executor import SecurityPolicy, ExecutionStatus
+from data_generation.api_schema_generator import APISchemaGenerator
+from data_generation.endpoint_generator import EndpointGenerator
 
 
 async def basic_subprocess_example():
@@ -142,7 +142,7 @@ async def api_testing_example():
             # Load some endpoints into the mock server
             if env.mock_server:
                 # Generate and load a simple API
-                from ..data_generation.api_schema_generator import APISchemaGenerator
+                from data_generation.api_schema_generator import APISchemaGenerator
                 schema_gen = APISchemaGenerator(seed=42)
                 api_spec = env.mock_server.load_user_management_api()
                 print(f"📋 Loaded mock API with {len(api_spec['paths'])} endpoints")

@@ -3,10 +3,10 @@ from typing import Dict, List, Any, Optional, Set, Tuple
 from dataclasses import dataclass, field
 from enum import Enum
 
-from ..data_generation.endpoint_generator import EndpointSpec
-from .code_template_generator import MissingComponent, DifficultyLevel, CodeTemplate
-from .schema_analyzer import APISchemaAnalyzer, SchemaAnalysis
-from .integration_patterns import PatternBasedTemplateGenerator
+from data_generation.endpoint_generator import EndpointSpec
+from utilities.code_template_generator import MissingComponent, DifficultyLevel, CodeTemplate
+from utilities.schema_analyzer import APISchemaAnalyzer, SchemaAnalysis
+from utilities.integration_patterns import PatternBasedTemplateGenerator
 
 
 class TemplateType(Enum):

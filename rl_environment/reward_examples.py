@@ -4,19 +4,19 @@ import asyncio
 import json
 from typing import List, Dict, Any
 
-from .reward_system import (
+from rl_environment.reward_system import (
     BaseRewardEvaluator, BinaryRewardEvaluator, RewardConfig, 
     RewardComponent, APICallInfo
 )
-from .reward_integration import (
+from rl_environment.reward_integration import (
     CodeRewardIntegrator, EvaluationContext, EvaluationMode
 )
-from .execution_environment import (
+from rl_environment.execution_environment import (
     ExecutionEnvironmentFactory, TestCase, TestSuite
 )
-from .code_executor import ExecutionResult, ExecutionStatus
-from ..data_generation.endpoint_generator import EndpointGenerator
-from ..utilities.code_template_generator import (
+from rl_environment.code_executor import ExecutionResult, ExecutionStatus
+from data_generation.endpoint_generator import EndpointGenerator
+from utilities.code_template_generator import (
     APIIntegrationTemplateGenerator, MissingComponent, DifficultyLevel
 )
 

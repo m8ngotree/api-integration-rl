@@ -2,12 +2,12 @@ from typing import Dict, List, Any, Optional
 from abc import ABC, abstractmethod
 import random
 
-from ..data_generation.endpoint_generator import EndpointSpec, HTTPMethod
-from .code_template_generator import (
+from data_generation.endpoint_generator import EndpointSpec, HTTPMethod
+from utilities.code_template_generator import (
     BaseCodeTemplateGenerator, MissingComponent, DifficultyLevel, 
     CodeTemplate, CodeGap
 )
-from .schema_analyzer import APISchemaAnalyzer, SchemaAnalysis
+from utilities.schema_analyzer import APISchemaAnalyzer, SchemaAnalysis
 
 
 class IntegrationPattern(ABC):

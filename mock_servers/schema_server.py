@@ -3,9 +3,9 @@ import random
 from typing import Dict, Any, List, Optional
 from fastapi import HTTPException
 
-from .base_server import MockServer
-from ..data_generation.api_schema_generator import APISchemaGenerator
-from ..data_generation.endpoint_generator import EndpointSpec
+from mock_servers.base_server import MockServer
+from data_generation.api_schema_generator import APISchemaGenerator
+from data_generation.endpoint_generator import EndpointSpec
 
 
 class SchemaBasedMockServer(MockServer):
@@ -151,9 +151,10 @@ class SchemaBasedMockServer(MockServer):
             for method, spec in methods.items():
                 if method.upper() in ["GET", "POST", "PUT", "DELETE"]:
                     try:
+                        from data_generation.endpoint_generator import HTTPMethod
                         endpoint_spec = EndpointSpec(
                             path=path,
-                            method=getattr(__import__("..data_generation.endpoint_generator", fromlist=["HTTPMethod"]).HTTPMethod, method.upper()),
+                            method=HTTPMethod(method.upper()),
                             summary=spec.get("summary", f"{method.upper()} {path}"),
                             description=spec.get("description", ""),
                             parameters=spec.get("parameters", []),
@@ -169,7 +170,7 @@ class SchemaBasedMockServer(MockServer):
     
     def _dict_to_endpoint_spec(self, spec_dict: Dict[str, Any]) -> EndpointSpec:
         """Convert a specification dictionary back to EndpointSpec"""
-        from ..data_generation.endpoint_generator import HTTPMethod
+        from data_generation.endpoint_generator import HTTPMethod
         
         return EndpointSpec(
             path=spec_dict["path"],

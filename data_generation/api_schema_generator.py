@@ -2,8 +2,8 @@ import json
 import random
 from typing import Dict, List, Any, Optional
 from datetime import datetime
-from .endpoint_generator import EndpointGenerator, EndpointSpec
-from .data_generator import RandomDataGenerator
+from data_generation.endpoint_generator import EndpointGenerator, EndpointSpec
+from data_generation.data_generator import RandomDataGenerator
 
 
 class APISchemaGenerator:
@@ -159,7 +159,7 @@ class APISchemaGenerator:
         return filtered
     
     def _generate_component_schemas(self) -> Dict[str, Any]:
-        from .schemas import (
+        from data_generation.schemas import (
             User, UserCreate, UserUpdate, UserResponse,
             Product, ProductCreate, ProductUpdate, ProductResponse,
             PaginatedResponse, ErrorResponse

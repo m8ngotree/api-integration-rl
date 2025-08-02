@@ -5,14 +5,14 @@ from typing import Dict, List, Any, Optional, Tuple, Callable
 from dataclasses import dataclass, field
 from enum import Enum
 
-from .reward_system import (
+from rl_environment.reward_system import (
     BaseRewardEvaluator, BinaryRewardEvaluator, RewardBreakdown, 
     RewardConfig, RewardComponent, APICallInfo
 )
-from .execution_environment import SafeExecutionEnvironment, TestCase, TestSuite
-from .code_executor import ExecutionResult, ExecutionStatus
-from ..data_generation.endpoint_generator import EndpointSpec
-from ..utilities.code_template_generator import CodeTemplate, CodeGap, MissingComponent
+from rl_environment.execution_environment import SafeExecutionEnvironment, TestCase, TestSuite
+from rl_environment.code_executor import ExecutionResult, ExecutionStatus
+from data_generation.endpoint_generator import EndpointSpec
+from utilities.code_template_generator import CodeTemplate, CodeGap, MissingComponent
 
 
 class EvaluationMode(Enum):

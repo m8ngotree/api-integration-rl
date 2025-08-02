@@ -9,8 +9,8 @@ from fastapi.responses import JSONResponse
 import uvicorn
 from contextlib import asynccontextmanager
 
-from ..data_generation.endpoint_generator import EndpointSpec, HTTPMethod
-from ..data_generation.data_generator import RandomDataGenerator
+from data_generation.endpoint_generator import EndpointSpec, HTTPMethod
+from data_generation.data_generator import RandomDataGenerator
 
 
 class MockServerError(Exception):

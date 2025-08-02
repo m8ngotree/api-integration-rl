@@ -8,7 +8,7 @@ import io
 from typing import Dict, List, Any, Optional
 from pathlib import Path
 
-from .code_executor import BaseCodeExecutor, ExecutionResult, ExecutionStatus, SecurityPolicy
+from rl_environment.code_executor import BaseCodeExecutor, ExecutionResult, ExecutionStatus, SecurityPolicy
 
 
 class DockerCodeExecutor(BaseCodeExecutor):

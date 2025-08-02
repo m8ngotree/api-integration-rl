@@ -2,7 +2,7 @@ from faker import Faker
 import random
 from datetime import datetime, timedelta
 from typing import Dict, Any, List
-from .schemas import (
+from data_generation.schemas import (
     User, UserCreate, UserRole,
     Product, ProductCreate, ProductCategory
 )
